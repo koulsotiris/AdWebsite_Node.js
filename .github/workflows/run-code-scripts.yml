@@ -4,7 +4,7 @@ name: Run Node.js Scripts
 on:
   push:
     branches:
-      - main
+      - main # Adjust to match your default branch
 
 jobs:
   run-scripts:
@@ -17,7 +17,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16' # Specify the Node.js version required
+        node-version: '20' # Specify Node.js version
 
     - name: Install dependencies
       run: npm install
