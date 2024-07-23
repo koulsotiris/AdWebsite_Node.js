@@ -1,0 +1,1007 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+/*Background style*/
+.align {
+  background-color: rgb(223, 223, 223);
+}
+
+/*μορφοποιηση κειμένων και προσθήκη grid για ευελικτη προβολη*/
+body {
+  /* display: grid;
+  gap:20px;
+  grid-template-areas:
+      "nav"
+      "header"
+      "sidebar"
+      "main"
+      "footer"; */
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  background-image: url('RESOURCES/background.jpg');
+  background-color: #f3f3f3;
+}
+
+#favourites_button {
+  display: none;
+  padding: 10px 20px; /* Adjust the padding to your preference */
+  text-decoration: none;
+  background-color: #333; /* Set your desired background color */
+  color: white; /* Set the text color */
+  border: 1px solid #333; /* Set the border color */
+  border-radius: 5px; /* Optional: add rounded corners */
+  font-size: 20px;
+}
+
+#favourites_button:hover {
+  background-color: #646363; /* Change the background color on hover */
+}
+
+#favor_button{
+  color:red;
+  text-align: right;
+  /* align-self: flex-end; */
+}
+
+#user{display:none;font-size: 20px; color : white;}
+
+#session{display:none; font-size: 20px; color : white;}
+
+
+#logoutButton{
+  font-size: 20px;
+  display: none;
+}
+
+#loginForm{
+  color: white;
+  background-color: #a3afbb56;
+}
+/* Logo icon in navbar*/
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Logo icon in index page */
+#logo2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#logo-li {
+  display: none;
+}
+
+/* Nav grid */
+.nav {
+  grid-area: nav;
+}
+
+/* Footer grid */
+.footer {
+  grid-area: footer;
+
+}
+
+/*Nav and Footer style*/
+nav {
+  /*xrwma kai uesh tou footer*/
+  background-color: #333;
+  color: rgb(206, 204, 202);
+  margin: 0;
+  text-align: center;
+}
+
+footer {
+  /*xrwma kai uesh tou footer*/
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(206, 204, 202);
+  margin: 0;
+  text-align: center;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+footer li {
+  display: inline;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #666;
+}
+
+li.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Navbar dropdown menu */
+.dropdown-content {
+  left: 100%;
+  top: 0%;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #cfcfcf;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.active {
+  background-color: #666;
+  color: white;
+}
+
+/*Link Style*/
+a {
+  color: rgb(243, 242, 242);
+  /*gia to xrwma twn link*/
+  text-decoration: none;
+}
+
+/*underlines twn link*/
+
+/*Forum style*/
+input[type=text],
+select,
+textarea {
+  /*xrwma perimetrou twn koutiwn sthn forma kai thesh*/
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/*Submit button*/
+input[type=submit] {
+  /*submit style button*/
+  background-color: #005cad;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: #003666;
+}
+
+.hcenter {
+  text-align: center;
+  color: rgb(48, 48, 48);
+}
+
+/* Search bar  */
+/* .search-bar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* header grid */
+.header {
+  grid-area: header;
+}
+
+/* sidebar grid */
+.sidebar {
+  color: white;
+  grid-area: sidebar;
+  margin-top: 60px;
+}
+
+/* main grid */
+.main {
+  grid-area: main;
+  margin-top: 60px;
+}
+
+/*Για να εχω στις αγγελίες τον τίτλο με διαφορετικο στυλ */
+.title h2,
+.title h3 {
+  margin: 0;
+  padding: 0;
+  color: rgb(48, 48, 48);
+}
+
+.title {
+  text-align: center;
+}
+
+.nolist {
+  list-style: none;
+}
+
+/* Κεντράρισμα του περιεχομένου κατακόρυφα και οριζόντια στο μέσο της εικόνας*/
+
+.text-nextto-image {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-nextto-image span {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+
+/* Δημιουργία flex box για τις αγγελιες τις ιστοσελιδας */
+/* .ad-container {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+
+/* Δημιουργία του grid στο οποίο θα εμφανίζονται όλες οι αγγελίες */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25em, auto));
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.ad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1e8e8;
+  /* width: 25%;  */
+  margin: 1%;
+  border: 1px solid #ccc;
+  /* padding: 10px; */
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+}
+
+
+.ad:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+.ad img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Κλαση για την περιγραφη του κωδικου καθε αγγελιας */
+.ad-code {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  margin-right: 10px;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+/* Κλαση για την περιγραφη της παλαιότητας καθε αγγελιας */
+.ad-time {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+
+
+/* Κλάση για να έχω τις επικεφαλίδες στο κέντρο  */
+.centered {
+  text-align: center;
+  /* Center-align the text */
+}
+
+/* Κλάση για να έχω τις επικεφαλίδες στο κέντρο του container */
+.centered-container {
+  margin-top: 0;
+  /* Remove default margin */
+}
+
+/* Κανόνες CSS για το στιλ των κελιών */
+.cell {
+  border: 0px solid #ccc;
+  /* Προσθέστε περίγραμμα γύρω από τα κελιά */
+  padding: 10px;
+  /* Περιθώρια εσωτερικά στα κελιά */
+  margin: 20px;
+  /* Περιθώρια μεταξύ των κελιών */
+  background-color: #f0f0f0;
+  /* Χρώμα φόντου των κελιών */
+}
+
+
+/* Κανόνες CSS για τη διάταξη των κελιών στη γραμμή */
+.list {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  /* Εμφάνιση των κελιών ως ευέλικτα (flex) στοιχεία */
+  flex-wrap: wrap;
+  /* Αναδίπλωση σε νέα γραμμή όταν το πλάτος δεν επαρκεί */
+}
+
+/* Ετσι ωστε να εχω τις φωτογραφιες της περιγραφης των αγγελιων στο κεντρο της οθονης */
+.center-container {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Grid για την περιγραφη των λεπτομερειων της αγγελιας σε bullets */
+.property-details-flex {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  /* Adjust the max-width as needed */
+  margin: 0 auto;
+
+}
+
+.column {
+  background-color: #f1e8e8;
+  flex: 1;
+  margin-right: 20px;
+  /* Adjust the margin between columns as needed */
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+
+
+/* Style for individual images (you can adjust this as needed) */
+.image {
+  max-width: calc(33.33% - 20px);
+  /* Limit the image width to one-third of container width with 10px margin on each side */
+  margin: 3px;
+}
+
+/* Ετσι ωστε οι φωτογραφιες να φαινονται παντοτε ολοκληρες χωρις να κοβονται */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Περιεχόμενο sidebar */
+#filterForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+label {
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: red;
+}
+
+#filterForm div {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#filterForm label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Index Page Container */
+.index-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, auto));
+  grid-gap: 10px;
+  padding: 75px;
+  margin-top: -80px;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+/* About Us Page Container */
+.profile-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  margin-top: -80px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+
+/* Add some shadows to create a card effect */
+.a_card {
+  box-shadow: 0 40px 50px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Some left and right padding inside the container */
+.a_container {
+  padding: 0 16px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+/* Clear floats */
+.a_container::after,
+.a_profile::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.a_title {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}
+
+.a_button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  text-align: center;
+  cursor: pointer;
+  width: 75%;
+}
+
+.a_button:hover {
+  background-color: #757575;
+}
+
+/* Grid container για την τοποθετηση των διαφορων κατηγοριων  */
+.categories-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, auto);
+  padding: 50px;
+  margin-top: -50px;
+  flex-wrap: wrap;
+}
+
+/* Flex containers για την τοποθετηση των υποκατηγοριών καθε κατηγορίας */
+.categories-container,
+.categories-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #888;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding: 20px;
+  gap: 20px; */
+}
+
+/* Αλλαγη φωτογραφιας background μεταξυ των flex containers */
+.categories-container {
+  background-image: url('RESOURCES/light.jpg');
+}
+
+.categories-container1 {
+  background-image: url('RESOURCES/dark.jpg');
+}
+
+/* Εσωτερική μπαρα στο categories-container που θα περιεχει τον τιτλο καθε κατηγορίας */
+.container-bar,
+.container-bar1 {
+  color: rgb(192, 192, 192);
+  width: 100%;
+}
+
+.container-bar {
+  background: linear-gradient(to right, rgb(121, 121, 121), rgb(68, 68, 68));
+}
+
+.container-bar1 {
+  background: linear-gradient(to right, black, rgb(63, 63, 63));
+}
+
+.container-bar h2 {
+  padding: 10px 0;
+}
+
+.categorie {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.categorie-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.categorie-name {
+  color: white;
+  font-size: 20px;
+  padding: 16px 32px;
+}
+
+.middle {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 5px;
+  transition: opacity 0.5s;
+}
+
+/* container για το contact */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 200px;
+  padding: 100px;
+  margin-top: -80px;
+  flex-wrap: wrap;
+}
+
+/* Flex box για το contact */
+.contact {
+  width: 70%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+}
+
+
+.categorie:hover .categorie-image {
+  opacity: 0.3;
+}
+
+/* Στυλ για τις διαφημίσεις */
+.advertisement {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-box {
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 10px;
+  background-color: rgb(90, 72, 72);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Σκίαση */
+}
+
+/* Στυλ για την εικόνα */
+.company-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Στυλ για το πλαίσιο του ονόματος της εταιρείας */
+.company-name {
+  margin-top: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Roboto Slab', sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+  width: calc(100% - 12px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/*Reset button*/
+input[type=reset] {
+  background-color: #a10000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  justify-content: right;
+}
+
+input[type=reset]:hover {
+  background-color: #680000;
+}
+
+/*Autocomplete button*/
+.autocompleteForm {
+  background-color: #009e00;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  justify-content: right;
+}
+
+.autocompleteForm:hover {
+  background-color: #206600;
+}
+
+
+/* Στυλ για το suggestion list που εμφανίζεται οταν θελουμε autocomplation */
+
+#suggestions2,
+#suggestions3 {
+
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+
+}
+
+#suggestions2 div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#suggestions3 div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#suggestions3 div:hover {
+  background-color: #ddd;
+}
+
+#suggestions2 div:hover {
+  background-color: #ddd;
+}
+
+/* Responsive design  */
+
+/* For desktops */
+@media screen and (min-width: 901px) {
+
+  body {
+    font-size: 14px;
+    /* gap:10px; */
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "nav header  sidebar"
+      "nav    main  sidebar"
+      "nav   main sidebar"
+      "footer footer  footer";
+  }
+
+  .nav {
+    grid-area: nav;
+    /* Add this line to ensure the nav takes the full height */
+    display: flex;
+    flex-direction: column;
+    /* Display nav items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center text */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    /* Display list items vertically */
+    /* background-color: #f1e8e8; */
+    font-size: 20px;
+  }
+
+  .nav li {
+    display: block;
+    /* Display list items as blocks */
+    margin-bottom: 10px;
+    /* Add some spacing between items */
+  }
+
+  /* nav{
+    background-color: #f1e8e8;
+  } */
+
+  #logo {
+    display: none;
+  }
+
+  #logo-li {
+    display: block;
+  }
+}
+
+/* For tablets with max width 900px */
+@media screen and (max-width: 900px) and (min-width : 601px) {
+  body {
+
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "nav     nav"
+      "sidebar  header"
+      "sidebar main"
+      "footer      footer";
+  }
+
+  .nav span {
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Set a high z-index to make sure it appears above other elements */
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  #logo {
+    max-width: 55px;
+
+  }
+
+  .header {
+    margin-top: 60px
+  }
+
+  .nav a .fa-home {
+    font-size: 23px;
+  }
+
+  .nav a {
+    font-size: 20px;
+  }
+}
+
+
+/* For phones with max width 600px */
+@media screen and (max-width: 600px) {
+
+  body {
+    font-size: 12px;
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+
+  .nav span {
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Set a high z-index to make sure it appears above other elements */
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  #logo {
+    max-width: 53px;
+
+  }
+
+  .header {
+    margin-top: 60px
+  }
+
+  .nav a .fa-home {
+    font-size: 23px;
+  }
+
+  .nav a {
+    font-size: 20px;
+  }
+
+  .ad-time {
+    font-size: 10px;
+  }
+
+
+}

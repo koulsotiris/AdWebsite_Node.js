@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="el">
+
+
+<!-- HEAD -->
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="js/category.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/favourites.js"></script>
+
+
+</head>
+
+<body>
+    
+<!-- NAV BAR -->
+<nav class="nav">
+  <div id="logo">
+      <img src="RESOURCES/logo.png" alt="Logo" width="58"  height="58">
+  </div>
+  <ul>
+    <li><div id="logo-li">
+      <img src="RESOURCES/logo.png" alt="Logo2" width="100"  height="100">
+    </div></li>
+    <li><a href="index.html"><i class="fa fa-fw fa-home"></i> <span>Home</span></a></li>
+    <!-- <li><button id="logoutButton">Logout</button></li> -->
+  </ul>
+  <div id="login-form">
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+  
+      <button type="button" onclick="login()">Login</button>
+    </form>
+  </div>
+  <a href="favourite-ads.html" id="favourites_button"><i class="fa fa-heart"></i>Αγαπημένες Αγγελίες</a>
+  <div id="user"><i class="fa fa-fw fa-user"></i> : <span id="UserName"></span></div>
+  <div id="session">Session id : <span id="sessionid"></span></div>
+  <button id="logoutButton"><i class="fa fa-sign-out"></i>Logout</button>
+</nav>
+
+  <header class="header">
+    <h2 class="hcenter">Υποκατηγορίες Αγγελιών</h2>
+</header>
+
+<div class="sidebar">
+  <!-- Διαφήμιση 1 -->
+  <div class="advertisement">
+    <div class="company-box">
+    <img class="company-image" src="RESOURCES/adv1.jpg" alt="Διαφήμιση 1">
+    <div class="company-name">
+      Καραμάνης Ανταλλακτικά
+    </div>
+  </div>
+</div>
+
+  <!-- Διαφήμιση 2 -->
+  <div class="advertisement">
+    <div class="company-box">
+    <img class="company-image" src="RESOURCES/adv2.gif" alt="Διαφήμιση 2">
+    <div class="company-name">
+      KOSTIS PARTS
+    </div>
+  </div>
+</div>
+
+<!-- Διαφήμιση 3 -->
+<div class="advertisement">
+  <div class="company-box">
+  <img class="company-image" src="RESOURCES/adv3.jpg" alt="Διαφήμιση 3">
+  <div class="company-name">
+    ΔΗΜ. ΜΕΛΑΝΙΔΗΣ & ΣΙΑ
+  </div>
+</div>
+</div>
+
+<!-- Διαφήμιση 4 -->
+<div class="advertisement">
+  <div class="company-box">
+  <img class="company-image" src="RESOURCES/adv4.gif" alt="Διαφήμιση 3">
+  <div class="company-name">
+    AKATSIPIS.GR
+  </div>
+</div>
+</div>
+</div>
+
+<main class="main">
+  <section class="categories-grid-container" id="categories-grid-container1">
+        <div class="categories-container" id="categories-container1">
+          <div class="container-bar">
+            <h2 class="centered">Κατηγορίες</h2>
+          </div>
+          <script id="categories-template" type="text/x-handlebars-template">
+          {{#each categories}}
+            <div class="categorie">
+              <a href="subcategory.html?id={{id}}"><img class="categorie-image" src="RESOURCES/black.png" alt="{{title}}" width="350" height="250">
+              <div class="middle">
+                <div class="categorie-name">{{title}}</div>
+              </div>
+              </a>
+            </div>
+          {{/each}}
+          </script>
+        </div>
+    
+    
+  </section>
+
+  <section class="grid-container">
+    <script id="ad-template" type="text/x-handlebars-template">
+      {{#each ad}}
+      <div class="ad">
+          <a href="#" class="add-to-favourites-btn" id="favor_button" >
+            <i class="fa fa-heart-o"></i> Προσθήκη στα Αγαπημένα
+          </a>
+          <div class="title">
+              <h2>{{title}}</h2>
+              <h3>Κοστος : {{cost}} ευρώ</h3>
+          </div>
+          
+          <img src="https://wiki-ads.onrender.com/{{images.[0]}}" alt="{{title}}" width="350" height="250">
+          <p>{{description}}</p>
+          <p class="ad-code">Κωδικός Αγγελίας: {{id}}</p>
+        </div>
+      {{/each}}
+    </script>
+  </section>
+</main>
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+  </ul>
+  <p>Location: Greece, Athens, 11362<br>
+      Tel: 210-123-45-67<br>
+      &copy; Copyright 2020
+  </p>
+</footer>
+</body>
+
+</html>

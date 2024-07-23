@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="el">
+
+
+<!-- HEAD -->
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ads</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="js/subcategory.js"></script>
+    <script src="path/to/handlebars-helpers.min.js"></script>
+
+</head>
+
+<body>
+  <!-- NAV BAR -->
+  <nav class="nav">
+    <div id="logo">
+        <img src="RESOURCES/logo.png" alt="Logo" width="58"  height="58">
+    </div>
+    <ul>
+      <li><div id="logo-li">
+        <img src="RESOURCES/logo.png" alt="Logo2" width="100"  height="100">
+      </div></li>
+      <li><a href="index.html"><i class="fa fa-fw fa-home"></i> <span>Home</span></a></li>
+    </ul>
+    
+</nav>
+
+
+<!-- Rentals -->
+
+<header class="header">
+  <h2 class="hcenter">Αγγελίες Κατηγορίας</h2>
+</header>
+
+<div class="sidebar">
+  <form id="filterForm" action="filter.php" method="get">
+    <h2>Φίλτρα αναζήτησης</h2>
+
+    <label for="location">Τοποθεσία:</label>
+    <input type="text" id="location" name="location" placeholder="π.χ. Αθήνα ">
+
+    <label for="price">Έυρος τιμής:</label>
+    <input type="range" id="price" name="price" min="0" max="1000" step="50">
+    <output for="price">0 - 1000000€</output>
+
+    <label for="date">Ελάχιστο έτος  :</label>
+    <input type="number" id="date" name="date" min="1900" max="2023" placeholder="π.χ. 2010 ">
+
+    <label for="code">Κωδικός αγγελίας:</label>
+    <input type="number" id="code" name="code" min="11" max="15" placeholder="π.χ. 12 ">
+
+    <button type="button"><i class="fa fa-search"></i></button>
+</form>
+
+</div>
+
+<main class="main">
+
+    <section class="grid-container">
+            <script id="ad-template" type="text/x-handlebars-template">
+              {{#each ad}}
+              <a href="{{ref}}" class="ad">
+                  <div class="title">
+                      <h2>{{title}}</h2>
+                      <h3>Κοστος : {{cost}} ευρώ</h3>
+                  </div>
+                  {{#each images}}
+                  <img src="https://wiki-ads.onrender.com/{{this}}" alt="{{../title}}" width="300" height="300">
+                  {{/each}}
+                  <p>{{description}}</p>
+                  <div class="features">
+                    <h4>Χαρακτηριστικά:</h4>
+                    <ul>
+                      {{#each (split features ';')}}
+                        <li>{{this}}</li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <p class="ad-code">Κωδικός Αγγελίας: {{id}}</p>
+                </a>
+              {{/each}}
+          </script>
+          
+
+
+
+    <!-- </div> -->
+    </section>
+  </main>
+
+
+  
+
+
+
+
+
+  
+<!-- FOOTER -->
+<footer class="footer">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+  </ul>
+  <p>Location: Greece, Athens, 11362<br>
+      Tel: 210-123-45-67<br>
+      &copy; Copyright 2020
+  </p>
+</footer>
+
+
+</body>
+
+</html>
