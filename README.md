@@ -3,8 +3,6 @@ This project is a **web-based classified ads platform** where users can browse d
 
 It is designed with **Node.js, Express.js, and Handlebars.js** for templating, alongside **HTML, CSS, and JavaScript** for the frontend.
 
----
-
 ## **Features**
 ### **1. User Authentication**
 - Users can **log in** via a form.
@@ -32,7 +30,6 @@ It is designed with **Node.js, Express.js, and Handlebars.js** for templating, a
 - The website is **mobile-friendly**.
 - Navigation bar and filters ensure an easy browsing experience.
 
----
 
 ## **Technologies Used**
 ### **Frontend:**
@@ -51,7 +48,6 @@ It is designed with **Node.js, Express.js, and Handlebars.js** for templating, a
 ### **External APIs & Services**
 - **Wiki-Ads API** (`https://wiki-ads.onrender.com/`) for fetching ads dynamically.
 
----
 
 ## **Future Improvements**
 - Implement **a real database** (MongoDB/PostgreSQL) instead of an in-memory store.
