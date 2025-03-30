@@ -13,18 +13,19 @@ document.addEventListener('click', function (event) {
       var adCostText = adContainer.querySelector(".title h3").textContent.trim();
       var adCost = parseInt(adCostText.replace("Κοστος : ", "").replace(" ευρώ", ""));
       var adImage = adContainer.querySelector("img").getAttribute("src");
-      const username = document.getElementById('UserName');
-      const sessionId = document.getElementById('sessionid');
+      var username = localStorage.getItem('username');
+      var sessionId = localStorage.getItem('sessionId');
+
 
         console.log("adId:", adId);
         console.log("adTitle:", adTitle);
         console.log("adDescription:", adDescription);
         console.log("adCost:", adCost);
         console.log("adImage:", adImage);
-        console.log("username:", username.innerHTML.trim());
-        console.log("sessionId:", sessionId.innerHTML.trim());
+        console.log("username:", username);
+        console.log("sessionId:", sessionId);
 
-      if (username.innerHTML.trim() != "") {
+      if (username != null) {
 
       // Make a POST request to the server
       fetch('http://localhost:3000/add-to-favourites', {
@@ -38,8 +39,8 @@ document.addEventListener('click', function (event) {
           adDescription,
           adCost,
           adImage,
-          username: username.innerHTML.trim(),
-          sessionId: sessionId.innerHTML.trim(),
+          username: username,
+          sessionId: sessionId,
         }),
       })
       .then(response => {

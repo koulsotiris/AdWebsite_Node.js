@@ -37,12 +37,13 @@
             {{#each favouriteAds}}
             <div class="ad">
                 <div class="title">
-                    <h2>{{title}}</h2>
+                    <h2>{{adTitle}}</h2>
                     <h3>Κοστος : {{cost}} ευρώ</h3>
                 </div>
-                <img src="{{image}}" alt="{{title}}" width="350" height="250">
-                <p>{{description}}</p>
-                <p class="ad-code">Κωδικός Αγγελίας: {{id}}</p>
+                <img src="{{adImage}}" alt="{{title}}" width="350" height="250">
+                <p>{{adDescription}}</p>
+                <p class="ad-code">Κωδικός Αγγελίας: {{adId}}</p>
+                <button class="remove-from-favourites-btn">Αφαίρεση από Αγαπημένα</button>
             </div>
             {{/each}}
         </script>
