@@ -78,6 +78,16 @@ document.addEventListener('DOMContentLoaded', function () {
               showSlide(adId, 0);
             });
           }, 200); // Allow time for DOM update
+
+
+        // Add a click event listener to the logout button
+      document.getElementById('logoutButton').addEventListener('click', function() {
+        // logout logic 
+        localStorage.removeItem('username');
+        localStorage.removeItem('sessionId');
+        // Reload the page
+        location.reload();
+      });
         });
 
 
