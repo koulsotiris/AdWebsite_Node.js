@@ -6,15 +6,36 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="js/category.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/favourites.js"></script>
+    <script src="js/Login.js"></script>
+    <script src="js/Category.js" defer></script>
+    <script src="js/Favourites.js" defer></script>
 
+  <!-- Session management logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const storedUsername = localStorage.getItem('username');
+      const storedSessionId = localStorage.getItem('sessionId');
 
+      if (storedUsername && storedSessionId) {
+        document.getElementById('UserName').textContent = storedUsername;
+        document.getElementById('sessionid').textContent = storedSessionId;
+
+        document.getElementById('user').style.display = 'block';
+        document.getElementById('session').style.display = 'block';
+        document.getElementById('favourites_button').style.display = 'inline-block';
+        document.getElementById('favourites_button').href =
+          `favourite-ads.html?username=${storedUsername}&sessionid=${storedSessionId}`;
+
+        document.getElementById('logoutButton').style.display = 'block';
+        document.getElementById('loginForm').style.display = 'none';
+      }
+
+    });
+  </script>
 </head>
 
 <body>

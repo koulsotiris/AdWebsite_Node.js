@@ -27,7 +27,7 @@ document.addEventListener('click', function (event) {
       if (username.innerHTML.trim() != "") {
 
       // Make a POST request to the server
-      fetch('http://localhost:3002/add-to-favourites', {
+      fetch('http://localhost:3000/add-to-favourites', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

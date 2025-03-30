@@ -6,11 +6,11 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ads</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="js/subcategory.js"></script>
+    <script src="js/Subcategory.js"></script>
     <script src="path/to/handlebars-helpers.min.js"></script>
 
 </head>
@@ -64,14 +64,18 @@
     <section class="grid-container">
             <script id="ad-template" type="text/x-handlebars-template">
               {{#each ad}}
-              <a href="{{ref}}" class="ad">
+              <div href="{{ref}}" class="ad">
                   <div class="title">
                       <h2>{{title}}</h2>
                       <h3>Κοστος : {{cost}} ευρώ</h3>
                   </div>
-                  {{#each images}}
-                  <img src="https://wiki-ads.onrender.com/{{this}}" alt="{{../title}}" width="300" height="300">
-                  {{/each}}
+                  <div class="slideshow-container" data-ad-id="{{id}}">
+                    {{#each images}}
+                      <img class="slide-{{../id}}" src="https://wiki-ads.onrender.com/{{this}}" alt="{{../title}}" style="display:none;" width="300" height="300">
+                    {{/each}}
+                    <button class="prev-btn" data-id="{{id}}">prev</button>
+                    <button class="next-btn" data-id="{{id}}">next</button>
+                  </div>
                   <p>{{description}}</p>
                   <div class="features">
                     <h4>Χαρακτηριστικά:</h4>
@@ -82,7 +86,7 @@
                     </ul>
                   </div>
                   <p class="ad-code">Κωδικός Αγγελίας: {{id}}</p>
-                </a>
+                </div>
               {{/each}}
           </script>
           

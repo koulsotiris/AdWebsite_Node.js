@@ -91,8 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Add a click event listener to the logout button
     document.getElementById('logoutButton').addEventListener('click', function() {
-        // Your logout logic here (e.g., clearing session data or making a logout API call)
-
+        // logout logic 
+        localStorage.removeItem('username');
+        localStorage.removeItem('sessionId');
         // Reload the page
         location.reload();
     });

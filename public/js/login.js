@@ -5,8 +5,10 @@ async function login() {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
+
+
   try {
-    const response = await fetch('http://localhost:3001/login', {
+    const response = await fetch('http://localhost:3000/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -22,6 +24,11 @@ async function login() {
 
       // Save the session ID (data.sessionId) for future requests
       const sessionValue = data.sessionId;
+
+
+      // Save to localStorage (persists across pages)
+      localStorage.setItem('username', username);
+      localStorage.setItem('sessionId', sessionValue);
 
       // Store login data in the array
       // const loginInfo = { username, sessionId: sessionValue };
